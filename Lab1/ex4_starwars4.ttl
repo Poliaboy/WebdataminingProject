@@ -1,0 +1,11 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix type: <http://sample/type/> .
+@prefix prop: <http://sample/prop/> .
+@prefix ex: <http://sample/> .
+
+ex:StarWarsIV rdf:type type:Movie .
+ex:Luke rdf:type type:Human ; rdf:type type:Jedi .
+ex:Chewbacca rdf:type type:Wookie ; prop:co-pilot ex:MillenniumFalcon .
+ex:MillenniumFalcon rdf:type type:Starship ; prop:speed "1.5"^^rdf:XMLLiteral .
+ex:Yoda rdf:type type:Jedi .

@@ -1,0 +1,31 @@
+@prefix ex: <http://sample/> .
+@prefix prop: <http://sample/prop/> .
+
+<http://sample/LukeSkywalker>
+        <http://sample/prop/playedBy>  <http://sample/MarkHamill> .
+
+<http://sample/MarkHamill>
+        <http://sample/prop/age>  "67" .
+
+
+<http://sample/HanSolo>
+        <http://sample/prop/playedBy>  <http://sample/HarrisonFord> .
+
+<http://sample/Leia>  <http://sample/prop/playedBy>  <http://sample/CarrieFisher> .
+
+<http://sample/DarthVader>
+        <http://sample/prop/playedBy>  <http://sample/DavidProwse> .
+
+<http://sample/LukeSkywalker>
+        <http://sample/prop/friendOf>  <http://sample/HanSolo> .
+
+<http://sample/Leia>  <http://sample/prop/friendOf>  <http://sample/HanSolo> .
+
+<http://sample/LukeSkywalker>
+        <http://sample/prop/enemyOf>  <http://sample/DarthVader> .
+
+<http://sample/DarthVader>
+        <http://sample/prop/fatherOf>  <http://sample/LukeSkywalker> .
+
+<http://sample/LukeSkywalker>
+        <http://sample/prop/siblingOf>  <http://sample/Leia> .

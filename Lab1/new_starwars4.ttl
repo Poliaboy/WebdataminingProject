@@ -1,0 +1,36 @@
+@prefix ex: <http://sample/> .
+@prefix prop: <http://sample/prop/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix type: <http://sample/type/> .
+
+
+ex:StarWarsIV rdf:type type:Movie .
+
+ex:Luke rdf:type type:Human ; rdf:type type:Jedi .
+
+ex:Chewbacca rdf:type type:Wookie ; prop:co-pilot ex:MillenniumFalcon .
+
+ex:MillenniumFalcon rdf:type type:Starship ; prop:speed "1.5"^^rdf:XMLLiteral .
+
+ex:Yoda rdf:type type:Jedi .
+
+ex:LukeSkywalker  prop:playedBy  ex:MarkHamill .
+
+ex:MarkHamill  prop:age  "67" .
+
+ex:HanSolo  prop:playedBy  ex:HarrisonFord .
+
+ex:Leia  prop:playedBy  ex:CarrieFisher .
+
+ex:DarthVader  prop:playedBy  ex:DavidProwse .
+
+ex:LukeSkywalker  prop:friendOf  ex:HanSolo .
+
+ex:Leia  prop:friendOf  ex:HanSolo .
+
+ex:LukeSkywalker  prop:enemyOf  ex:DarthVader .
+
+ex:DarthVader  prop:fatherOf  ex:LukeSkywalker .
+
+ex:LukeSkywalker  prop:siblingOf  ex:Leia .

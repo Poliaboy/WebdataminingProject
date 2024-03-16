@@ -1,0 +1,16 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix type: <http://sample/type/> .
+@prefix prop: <http://sample/prop/> .
+
+type:Movie rdf:type rdfs:Class .
+type:Creature rdf:type rdfs:Class .
+type:Human rdf:type rdfs:Class ; rdfs:subClassOf type:Creature .
+type:Wookie rdf:type rdfs:Class ; rdfs:subClassOf type:Creature .
+type:Jedi rdf:type rdfs:Class ; rdfs:subClassOf type:Creature .
+type:Starship rdf:type rdfs:Class .
+
+prop:has-character rdf:type rdf:Property ; rdfs:domain type:Movie ; rdfs:range type:Creature .
+prop:co-pilot rdf:type rdf:Property ; rdfs:domain type:Starship ; rdfs:range type:Creature .
+prop:speed rdf:type rdf:Property ; rdfs:domain type:Starship ; rdfs:range rdf:XMLLiteral .
+

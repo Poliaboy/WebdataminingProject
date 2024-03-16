@@ -1,0 +1,47 @@
+{
+    "@graph": [
+        {
+            "@id": "http://sample/HanSolo",
+            "http://sample/prop/playedBy": {
+                "@id": "http://sample/HarrisonFord"
+            }
+        },
+        {
+            "@id": "http://sample/DarthVader",
+            "http://sample/prop/fatherOf": {
+                "@id": "http://sample/LukeSkywalker"
+            },
+            "http://sample/prop/playedBy": {
+                "@id": "http://sample/DavidProwse"
+            }
+        },
+        {
+            "@id": "http://sample/LukeSkywalker",
+            "http://sample/prop/siblingOf": {
+                "@id": "http://sample/Leia"
+            },
+            "http://sample/prop/enemyOf": {
+                "@id": "http://sample/DarthVader"
+            },
+            "http://sample/prop/friendOf": {
+                "@id": "http://sample/HanSolo"
+            },
+            "http://sample/prop/playedBy": {
+                "@id": "http://sample/MarkHamill"
+            }
+        },
+        {
+            "@id": "http://sample/Leia",
+            "http://sample/prop/friendOf": {
+                "@id": "http://sample/HanSolo"
+            },
+            "http://sample/prop/playedBy": {
+                "@id": "http://sample/CarrieFisher"
+            }
+        },
+        {
+            "@id": "http://sample/MarkHamill",
+            "http://sample/prop/age": "67"
+        }
+    ]
+}

@@ -1,0 +1,712 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="" IRI="http://www.example.com/family#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class abbreviatedIRI=":Aunt"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Brother"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Child"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Daughter"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Father"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Female"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Grandfather"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Grandmother"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Grandparent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Male"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Mother"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Parent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Sibling"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Sister"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Son"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Uncle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isBrotherOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isChildOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isFatherOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isMarriedWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isMotherOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isParentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isSiblingOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isSisterOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":nationality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Alex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Chloe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Claude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":John"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Marie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Michael"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Paul"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Pedro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Peter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Sylvie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Thomas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Tom"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="xsd:integer"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="xsdstring"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="xsd:string"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":hasNationality"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":Brother"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isBrotherOf"/>
+            <Class abbreviatedIRI=":Person"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":Daughter"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+            <Class abbreviatedIRI=":Person"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":Father"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isFatherOf"/>
+            <Class abbreviatedIRI=":Person"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":Grandfather"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isFatherOf"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI=":isParentOf"/>
+                    <Class abbreviatedIRI=":Person"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":Grandmother"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isMotherOf"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI=":isParentOf"/>
+                    <Class abbreviatedIRI=":Person"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":Mother"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isMotherOf"/>
+            <Class abbreviatedIRI=":Person"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":Sister"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isSisterOf"/>
+            <Class abbreviatedIRI=":Person"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI=":Son"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isSonOf"/>
+            <Class abbreviatedIRI=":Person"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Aunt"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Aunt"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isSisterOf"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI=":isParentOf"/>
+                <Class abbreviatedIRI=":Person"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Brother"/>
+        <Class abbreviatedIRI=":Male"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Brother"/>
+        <Class abbreviatedIRI=":Sibling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Child"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Daughter"/>
+        <Class abbreviatedIRI=":Child"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Daughter"/>
+        <Class abbreviatedIRI=":Female"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Father"/>
+        <Class abbreviatedIRI=":Male"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Father"/>
+        <Class abbreviatedIRI=":Parent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Female"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Grandfather"/>
+        <Class abbreviatedIRI=":Grandparent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Grandfather"/>
+        <Class abbreviatedIRI=":Male"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Grandmother"/>
+        <Class abbreviatedIRI=":Female"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Grandmother"/>
+        <Class abbreviatedIRI=":Grandparent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Grandparent"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Male"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Mother"/>
+        <Class abbreviatedIRI=":Female"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Mother"/>
+        <Class abbreviatedIRI=":Parent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Parent"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sibling"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sister"/>
+        <Class abbreviatedIRI=":Female"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Sister"/>
+        <Class abbreviatedIRI=":Sibling"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Son"/>
+        <Class abbreviatedIRI=":Child"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Son"/>
+        <Class abbreviatedIRI=":Male"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Uncle"/>
+        <Class abbreviatedIRI=":Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Uncle"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI=":isBrotherOf"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI=":isParentOf"/>
+                <Class abbreviatedIRI=":Person"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI=":Daughter"/>
+        <Class abbreviatedIRI=":Son"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI=":Father"/>
+        <Class abbreviatedIRI=":Mother"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI=":Grandfather"/>
+        <Class abbreviatedIRI=":Grandmother"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Female"/>
+        <NamedIndividual abbreviatedIRI=":Alex"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Female"/>
+        <NamedIndividual abbreviatedIRI=":Chloe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Female"/>
+        <NamedIndividual abbreviatedIRI=":Claude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Male"/>
+        <NamedIndividual abbreviatedIRI=":John"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Female"/>
+        <NamedIndividual abbreviatedIRI=":Marie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Male"/>
+        <NamedIndividual abbreviatedIRI=":Michael"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Male"/>
+        <NamedIndividual abbreviatedIRI=":Paul"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Male"/>
+        <NamedIndividual abbreviatedIRI=":Pedro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Male"/>
+        <NamedIndividual abbreviatedIRI=":Peter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Female"/>
+        <NamedIndividual abbreviatedIRI=":Sylvie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Male"/>
+        <NamedIndividual abbreviatedIRI=":Thomas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Male"/>
+        <NamedIndividual abbreviatedIRI=":Tom"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isMarriedWith"/>
+        <NamedIndividual abbreviatedIRI=":Alex"/>
+        <NamedIndividual abbreviatedIRI=":Thomas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+        <NamedIndividual abbreviatedIRI=":Chloe"/>
+        <NamedIndividual abbreviatedIRI=":Marie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+        <NamedIndividual abbreviatedIRI=":Chloe"/>
+        <NamedIndividual abbreviatedIRI=":Peter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+        <NamedIndividual abbreviatedIRI=":Claude"/>
+        <NamedIndividual abbreviatedIRI=":Sylvie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <NamedIndividual abbreviatedIRI=":Michael"/>
+        <NamedIndividual abbreviatedIRI=":Alex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <NamedIndividual abbreviatedIRI=":Michael"/>
+        <NamedIndividual abbreviatedIRI=":Thomas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <NamedIndividual abbreviatedIRI=":Paul"/>
+        <NamedIndividual abbreviatedIRI=":Peter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <NamedIndividual abbreviatedIRI=":Pedro"/>
+        <NamedIndividual abbreviatedIRI=":John"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isMarriedWith"/>
+        <NamedIndividual abbreviatedIRI=":Peter"/>
+        <NamedIndividual abbreviatedIRI=":Marie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+        <NamedIndividual abbreviatedIRI=":Sylvie"/>
+        <NamedIndividual abbreviatedIRI=":Marie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+        <NamedIndividual abbreviatedIRI=":Sylvie"/>
+        <NamedIndividual abbreviatedIRI=":Peter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isMarriedWith"/>
+        <NamedIndividual abbreviatedIRI=":Sylvie"/>
+        <NamedIndividual abbreviatedIRI=":John"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <NamedIndividual abbreviatedIRI=":Thomas"/>
+        <NamedIndividual abbreviatedIRI=":Peter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <NamedIndividual abbreviatedIRI=":Tom"/>
+        <NamedIndividual abbreviatedIRI=":Alex"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <NamedIndividual abbreviatedIRI=":Tom"/>
+        <NamedIndividual abbreviatedIRI=":Thomas"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":isBrotherOf"/>
+        <ObjectProperty abbreviatedIRI=":isSiblingOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+        <ObjectProperty abbreviatedIRI=":isChildOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":isFatherOf"/>
+        <ObjectProperty abbreviatedIRI=":isParentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":isMotherOf"/>
+        <ObjectProperty abbreviatedIRI=":isParentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":isSisterOf"/>
+        <ObjectProperty abbreviatedIRI=":isSiblingOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <ObjectProperty abbreviatedIRI=":isChildOf"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI=":isChildOf"/>
+        <ObjectProperty abbreviatedIRI=":isParentOf"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI=":isMarriedWith"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty abbreviatedIRI=":isSiblingOf"/>
+    </SymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty abbreviatedIRI=":isSiblingOf"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isBrotherOf"/>
+        <Class abbreviatedIRI=":Male"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isChildOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+        <Class abbreviatedIRI=":Female"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isFatherOf"/>
+        <Class abbreviatedIRI=":Male"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isMarriedWith"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isMotherOf"/>
+        <Class abbreviatedIRI=":Female"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isParentOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isSiblingOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isSisterOf"/>
+        <Class abbreviatedIRI=":Female"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <Class abbreviatedIRI=":Male"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isBrotherOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isChildOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isDaughterOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isFatherOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isMarriedWith"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isMotherOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isParentOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isSiblingOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isSisterOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":isSonOf"/>
+        <Class abbreviatedIRI=":Person"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI=":age"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI=":name"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty abbreviatedIRI=":nationality"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":age"/>
+        <Class abbreviatedIRI=":Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":name"/>
+        <Class abbreviatedIRI=":Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":nationality"/>
+        <Class abbreviatedIRI=":Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":age"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":nationality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Alex</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">25</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Chloe</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">18</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Claude</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasNationality"/>
+        <AbbreviatedIRI>:Claude</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:string">French</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:John</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">45</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasNationality"/>
+        <AbbreviatedIRI>:John</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:string">Italian</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Marie</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">69</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasNationality"/>
+        <AbbreviatedIRI>:Marie</AbbreviatedIRI>
+        <Literal datatypeIRI="xsdstring">French</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Michael</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">5</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Paul</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">38</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Pedro</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Peter</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">70</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasNationality"/>
+        <AbbreviatedIRI>:Peter</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:string">French</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Sylvie</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">30</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Thomas</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">40</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasNationality"/>
+        <AbbreviatedIRI>:Thomas</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:string">French</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":hasAge"/>
+        <AbbreviatedIRI>:Tom</AbbreviatedIRI>
+        <Literal datatypeIRI="xsd:integer">10</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

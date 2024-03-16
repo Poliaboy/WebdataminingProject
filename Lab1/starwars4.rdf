@@ -1,0 +1,24 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://sample/prop/" > 
+  <rdf:Description rdf:about="http://sample/Leia">
+    <j.0:friendOf rdf:resource="http://sample/HanSolo"/>
+    <j.0:playedBy rdf:resource="http://sample/CarrieFisher"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/DarthVader">
+    <j.0:fatherOf rdf:resource="http://sample/LukeSkywalker"/>
+    <j.0:playedBy rdf:resource="http://sample/DavidProwse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/LukeSkywalker">
+    <j.0:siblingOf rdf:resource="http://sample/Leia"/>
+    <j.0:enemyOf rdf:resource="http://sample/DarthVader"/>
+    <j.0:friendOf rdf:resource="http://sample/HanSolo"/>
+    <j.0:playedBy rdf:resource="http://sample/MarkHamill"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/HanSolo">
+    <j.0:playedBy rdf:resource="http://sample/HarrisonFord"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://sample/MarkHamill">
+    <j.0:age>67</j.0:age>
+  </rdf:Description>
+</rdf:RDF>
