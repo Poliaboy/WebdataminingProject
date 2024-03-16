@@ -1,59 +1,60 @@
-# Web Data Mining & Semantics Project
+# Web Datamining & Semantics Project
 
 ## Overview
 
-The Semantic Web project is an extensive, practical exercise designed to incorporate various elements covered in initial sessions into a unified application. This project involves working in pairs to ensure efficient progress and comprehensive coverage of the required materials.
+The Semantic Web project is a comprehensive and hands-on exercise designed to integrate various components discussed in initial sessions into a unified application. Participants will work in pairs to ensure rapid progress covering all aspects.
 
 ### Main Objectives
 
-- **Design a Food Delivery Discovery Service:** Develop a service that identifies various entities relevant to food delivery, including food products, offers (individual items or combos), restaurants, businesses, delivery services (e.g., Delivroo, Uber Eats), and customer preferences.
-- **Develop an Application:** Create an application that recommends where to order food based on a customer's description at the time of request.
+- **Design a food delivery discovery service:** The service will involve several entities including food products, offers (individual items or combos), restaurants, businesses, delivery services (individuals or companies like Delivroo, Uber Eats), and customers along with their preferences.
+
+- **Develop an application:** The application will recommend where to order food based on the customer's description at the time of the request.
 
 ### Pedagogical Objectives
 
 - Engage in software development using Semantic Web programming frameworks.
 - Set up and interact with an RDF database.
-- Utilize multiple sources of heterogeneous data.
+- Leverage multiple sources of heterogeneous data.
 - Present information online with rich metadata.
 
 ## Part I: Modeling the Ontology
 
-### Goals
+Create an ontology using the Protégé editor to model the food delivery discovery service. This includes:
 
-- Create an ontology with the Protégé editor, focusing on class hierarchy, properties, and restrictions.
+- **Class and Property Hierarchies:** Define at least three hierarchies and restrictions.
+- **Class Restrictions:** Implement at least three restrictions such as disjoint, existential, universal, etc.
+- **Property Types:** If necessary, define at least three property types like transitive, symmetric, inverseOf, etc.
 
-### Indications
-
-- Define at least three hierarchies and three restrictions for classes and properties.
-- Implement various property types (e.g., transitive, symmetric, inverseOf) as needed.
-- Ensure your application adheres to Linked Data principles, utilizing Schema.org for class instances.
-- Verify ontology consistency with PELLET.
+Ensure your application follows Linked Data principles, starting with Schema.org instances and adhering to data availability and standard vocabulary principles. Validate your ontology with PELLET for consistency.
 
 ## Part II: Populating the Ontology
 
-### Tasks
+Populate your knowledge base by:
 
-- Manually create RDF instances in Protégé.
-- Convert and load data from non-RDF formats to RDF, using SPARQL Update queries for programmatic additions.
-- Utilize JSON Context for converting data from open sources like CoopCycle.
+- **Manually:** Create RDF instances in Protégé.
+- **Other Sources:** Convert data from non-RDF formats into RDF, utilizing online data sources like CoopCycle for bike delivery coops information. Enhance JSON files with Json Context for RDF conversion, using SPARQL Update queries for data addition.
 
 ## Part III: Querying the Ontology
 
-### Objectives
+Develop SPARQL queries to:
 
-- Write SPARQL queries to retrieve information about food products, offers, customers, and specific restaurant details.
+1. List instances of food products, offers, and customers.
+2. Identify all Paris restaurants and vegetarian restaurants, including their delivery services.
+3. Find deliverymen over 51 who can deliver in Lyon in under 15 minutes.
+4. Discover restaurants serving Italian food on a specific day, including availability.
 
-### Propose 5 SPARQL Queries
+Propose five SPARQL queries featuring various query forms and patterns, such as Optional Graph Patterns, alternatives, CONSTRUCT, ASK, and DESCRIBE.
 
-1. A query with at least 2 Optional Graph Patterns.
-2. A query featuring at least 2 alternatives and conjunctions.
-3. A query with a CONSTRUCT query form.
-4. A query using an ASK query form.
-5. A query employing a DESCRIBE query form.
+## Part IV: Manipulating the Ontology with Jena
 
-## Part IV: Manipulating the Ontology using Jena
+Using Jena, implement functionalities to:
 
-### Develop Functionalities
+- Load the ontology, displaying all Persons and Restaurants serving Italian food, with and without the use of queries and inference.
+- Develop a program to handle food searches, displaying error messages or relevant restaurant, delivery service, and offer information.
+- Implement a rule to define a new class RestDelivery and specify three different rules in a Java program.
 
-- Load the ontology to display all Persons (with and without using queries).
-- Load the ontology to display all Restaurants serving Ita
+## Submission Details
+
+- Full-time project work during remaining sessions.
+- Final delivery includes all working files, a presentation, and a demo on the last course session, along with a report detailing your choices and functionalities. A deadline will be provided by professors.
+- Submit an archive (`name1-name2-name3.zip`) containing the .owl file, SPARQL queries, Eclipse src and data folders, and the presentation file in DVO deposit.
