@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xml:base="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://protege.stanford.edu/plugins/owl/protege"/>
+  </owl:Ontology>
+    <owl:Class rdf:about="#Customer"/>
+    <owl:Class rdf:about="#Address"/>
+    <owl:Class rdf:about="#Preference"/>
+    <owl:Class rdf:about="#FoodPreference"/>
+
+    <owl:ObjectProperty rdf:about="#hasAddress">
+        <rdfs:domain rdf:resource="#Customer"/>
+        <rdfs:range rdf:resource="#Address"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasPreference">
+        <rdfs:domain rdf:resource="#Customer"/>
+        <rdfs:range rdf:resource="#Preference"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#prefersFood">
+        <rdfs:subPropertyOf rdf:resource="#hasPreference"/>
+        <rdfs:range rdf:resource="#FoodPreference"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="#name">
+        <rdfs:domain rdf:resource="#Customer"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#addressLine">
+        <rdfs:domain rdf:resource="#Address"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#postalCode">
+        <rdfs:domain rdf:resource="#Address"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="#foodType">
+        <rdfs:domain rdf:resource="#FoodPreference"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
+</rdf:RDF>

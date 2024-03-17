@@ -1,0 +1,22 @@
+Prefix(:=<http://www.semanticweb.org/lionvsx/ontologies/2024/2/untitled-ontology-14/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/lionvsx/ontologies/2024/2/untitled-ontology-14>
+
+Declaration(Class(<http://www.semanticweb.org/lionvsx/ontologies/2024/2/untitled-ontology-14#Hey>))
+Declaration(Class(<http://www.semanticweb.org/lionvsx/ontologies/2024/2/untitled-ontology-14#What_is_this>))
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/lionvsx/ontologies/2024/2/untitled-ontology-14#What_is_this> (<http://www.semanticweb.org/lionvsx/ontologies/2024/2/untitled-ontology-14#What_is_this>)
+
+SubClassOf(<http://www.semanticweb.org/lionvsx/ontologies/2024/2/untitled-ontology-14#What_is_this> <http://www.semanticweb.org/lionvsx/ontologies/2024/2/untitled-ontology-14#Hey>)
+
+
+)

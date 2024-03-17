@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.com/foodDelivery#"
+         xml:base="http://www.example.com/foodDelivery"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:schema="http://schema.org/">
+
+    <!-- Declaration of Classes -->
+    <owl:Class rdf:ID="Person"/>
+    <owl:Class rdf:ID="Customer">
+        <rdfs:subClassOf rdf:resource="#Person"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Product"/>
+    <owl:Class rdf:ID="FoodItem">
+        <rdfs:subClassOf rdf:resource="#Product"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Offer"/>
+    <owl:Class rdf:ID="FoodOffer">
+        <rdfs:subClassOf rdf:resource="#Offer"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Business"/>
+    <owl:Class rdf:ID="Restaurant">
+        <rdfs:subClassOf rdf:resource="#Business"/>
+    </owl:Class>
+    <owl:Class rdf:ID="DeliveryService">
+        <rdfs:subClassOf rdf:resource="#Business"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Preference"/>
+    <owl:Class rdf:ID="Order"/>
+    <owl:Class rdf:ID="Location"/>
+
+    <owl:ObjectProperty rdf:ID="includesFoodItem">
+        <rdfs:domain rdf:resource="#FoodOffer"/>
+        <rdfs:range rdf:resource="#FoodItem"/>
+    </owl:ObjectProperty>
+
+    <Product rdf:ID="Pizza">
+
+    </Product>
+</rdf:RDF>

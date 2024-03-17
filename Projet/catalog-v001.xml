@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl" uri="file:/Users/lionvsx/Documents/GitHub/WebdataminingProject/Lab2/pizzas2_1.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.com/family" uri="file:/Users/lionvsx/Documents/GitHub/WebdataminingProject/Lab3/family.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/lionvsx/ontologies/2024/1/Customer" uri="test.owx"/>
+    <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/lionvsx/ontologies/2024/1/ShopManagement" uri="ShopManagement.owx"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1710703198926" name="duplicate:http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl" uri="projet.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1710703198926" name="duplicate:http://www.co-ode.org/ontologies/pizza/pizza_20041007.owl" uri="testLeo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1710703198926" name="http://www.semanticweb.org/lionvsx/ontologies/2024/1/Customer" uri="test.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1710703198926" name="http://www.semanticweb.org/lionvsx/ontologies/2024/1/ShopManagement" uri="ShopManagement.owx"/>
+    </group>
+</catalog>
